@@ -63,9 +63,15 @@ class GradeListfilter(generics.ListAPIView):
     queryset = Grade.objects.all()
     serializer_class = GradeSerializer
     filter_backends = [filters.SearchFilter]
-    search_fields = ['@courseDescription', '@instructorLast', '@instructorFirst']
+    search_fields = ['@courseDescription', '@instructorLast']
 
     # '^' Starts-with search.
     # '=' Exact matches.
     # '@' Full-text search. (Currently only supported Django's PostgreSQL backend.)
     # '$' Regex search.
+
+    # written for debuggging multi-word queries sept 20 2021
+    # def list(self, request, *args, **kwargs):
+    #     return super().list(request, *args, **kwargs)
+
+
