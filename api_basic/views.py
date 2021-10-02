@@ -26,7 +26,6 @@ def grade_list(request):
 
     elif request.method == 'POST':
         data = JSONParser().parse(request)
-        #CHECK THIS LINE IF ERROR
         serializer = GradeSerializer(data=data, many=True)
 
         if serializer.is_valid():
