@@ -70,8 +70,4 @@ class GradeListfilter(generics.ListAPIView):
     # '@' Full-text search. (Currently only supported Django's PostgreSQL backend.)
     # '$' Regex search.
 
-    # written for debuggging multi-word queries sept 20 2021
-    # def list(self, request, *args, **kwargs):
-    #     return super().list(request, *args, **kwargs)
-
 
